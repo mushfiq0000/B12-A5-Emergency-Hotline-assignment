@@ -1,12 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emergency Service</title>
-    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
-</head>
-<body>
-    <h1>Emergency Service</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emergency Service Directory</title>
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <header class="h-[100px] mx-[60px]">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center">
+          <img src="./assets/logo.png" alt="" class="w-[50px]" />
+          <h1 class="ml-2 text-[#006747] font-extrabold">
+            Emergency <br />
+            Service
+          </h1>
+        </div>
+
+        <div class="flex gap-3 p-4">
+          <div
+            class="bg-[#41ff6b1a] font-bold flex items-center gap-3 w-[123px] rounded-[50px] justify-center"
+          >
+            <p>0</p>
+            <img src="./assets/heart.png" alt="" class="w-6" />
+          </div>
+
+          <div
+            class="bg-[#41ff6b1a] font-bold flex items-center gap-3 w-[123px] rounded-[50px] justify-center"
+          >
+            <p>100</p>
+            <img src="./assets/coin.png" alt="" class="w-6" />
+          </div>
+
+          <div
+            class="bg-[#00a63e] text-white font-bold flex items-center p-3 rounded-[50px] w-[123px] justify-center"
+          >
+            <p><span>0</span> Copy</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section
+        class="bg-gradient-to-b from-[#006747] to-[#013223] w-full text-center"
+      >
+        <div class="p-5">
+          <div class="flex justify-center items-center">
+            <div>
+              <img
+                src="./assets/logo-dark.png"
+                alt=""
+                class="w-[92px] h-[92px]"
+              />
+            </div>
+          </div>
+          <h1 class="text-white font-bold text-4xl mt-2">
+            Emergency Service Directory
+          </h1>
+          <p class="text-white text-lg mt-2">
+            Government Emergency Services at Your Fingertip – A Project by
+            Government of the People’s Republic of Bangladesh
+          </p>
+        </div>
+      </section>
+
+      <section>
+
+        <div class="bg-[#F5FFF6] w-11/12 mx-auto py-10 grid grid-cols-12">
+          <div class="border-2 border-red-500 col-span-9">card</div>
+
+          <div class="border-2 border-blue-500 col-span-3">Call History</div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
