@@ -1,3 +1,6 @@
+
+// Heart button---------------
+
 const totalHearts = document.getElementsByClassName("add-heart-btn");
 for (const totalHeart of totalHearts) {
   totalHeart.addEventListener("click", function () {
@@ -10,19 +13,19 @@ for (const totalHeart of totalHearts) {
   });
 }
 
+
+// Call button-----------------
+
 const callBtns = document.getElementsByClassName("call-btn");
 for (const callBtn of callBtns) {
   callBtn.addEventListener("click", function () {
     const totalCoin = Number(document.getElementById("total-coin").innerText);
     let coin = totalCoin - 20;
 
-    const subTitel =
-      callBtn.parentNode.parentNode.children[1].children[0].children[1]
-        .innerText;
-
-    const subNumber =
-      callBtn.parentNode.parentNode.children[1].children[1].children[0]
-        .innerText;
+    
+    const subTitel = callBtn.parentNode.parentNode.children[1].children[1].innerText
+    const subNumber = callBtn.parentNode.parentNode.children[2].children[0].innerText
+    
 
     if (totalCoin >= 20) {
       alert(`📞Calling ${subTitel} ${subNumber}...`);
@@ -33,7 +36,7 @@ for (const callBtn of callBtns) {
       const date = new Date().toLocaleTimeString()
       const historyBox = document.getElementById("history-box");
       const historyElement = document.createElement("div");
-      historyElement.innerHTML = `<div class="flex justify-between items-center mr-5 px-4 py-3  rounded-xl bg-[#fafafa]">
+      historyElement.innerHTML = `<div class="flex justify-between items-center  px-4 py-3  rounded-xl bg-[#fafafa]">
 
               <div>
                 <h1 class="font-bold">${subTitel}</h1>
@@ -52,7 +55,7 @@ for (const callBtn of callBtns) {
         "❌You don’t have enough coins. You need at least 20 coins to make a call."
       );
     }
-  });
+  })
 }
 
 
@@ -69,11 +72,11 @@ for (const copyBtn of copyBtns){
 
       document.getElementById('copy-number').innerText = totalCopyNumber
 
-    const subNumber = copyBtn.parentNode.parentNode.children[1].children[1].children[0].innerText;
-
+    const subNumber = copyBtn.parentNode.parentNode.children[2].children[0].innerText
+      
     
         navigator.clipboard.writeText(subNumber).then(() => {
-      alert("Copied: " + subNumber);
+        alert("Copied: " + subNumber);
     });
         
 
